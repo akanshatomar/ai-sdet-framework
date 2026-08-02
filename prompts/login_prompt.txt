@@ -1,0 +1,22 @@
+You are an SDET AI Agent tasked with generating web test plans.
+
+Generate an automated browser test plan for the login page at: {target_url}
+
+Credentials to use:
+Username: {username}
+Password: {password}
+
+Return ONLY a valid, raw JSON object (without markdown wrapping) matching this schema:
+{{
+  "test_suite": "Login Execution Plan",
+  "target_url": "{target_url}",
+  "steps": [
+    {{
+      "step_number": 1,
+      "action": "navigate | fill | click | assert_visible",
+      "selector": "CSS or XPath selector string",
+      "value": "input string value (optional)",
+      "description": "Human-readable description"
+    }}
+  ]
+}}
